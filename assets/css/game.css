@@ -1,0 +1,76 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  margin: 50px auto;
+  height: 70px;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  gap: 15px;
+}
+
+.card {
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #333;
+  position: relative;
+  transition: all .6s ease;
+  transform-style: preserve-3d; /* Preservando o 3d  */
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #1e4c1f;
+  box-shadow: 0 0 8px #39813a;
+}
+
+.front {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-image: url('../img/back.png');
+  background-size: cover;
+  background-position: center;
+  backface-visibility: hidden; /* Ocultando a parte de trás das costas*/
+}
+
+.reveal-card {
+  transform: rotateY(180deg);
+}
+.disabled-card {
+  filter: saturate(0);
+  opacity: 0.8;
+}

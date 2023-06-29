@@ -1,0 +1,54 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.login-header img{
+  width: 280px;
+}
+
+.player-name-input {
+  outline: none;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.player-name-input::placeholder{
+  color: #fff;
+}
+
+.play-btn {
+  background-color: #ff5eac;
+  border: 2px solid #05cdf6;
+  color: #DBE200;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.play-btn:disabled {
+  color: #fff;
+  border: none;
+  background-color: #979797;
+  cursor: default;
+}
